@@ -10,18 +10,31 @@ class App extends React.Component {
     constructor(props) {
         super(props); // To make sure React.Component's constructor gets called
 
-        this.state = { lat: null }; // Initialized state: Only time we do a direct assignment to this.state
+        this.state = { lat: null, errorMessage: '' }; // Initialized state: Only time we do a direct assignment to this.state
 
         window.navigator.geolocation.getCurrentPosition(
-            (position) => this.setState({lat: position.coords.latitude}),
-            (err) => console.log(err)
+            (position) => {
+                // Set the latitude in state
+                this.setState({lat: position.coords.latitude});
+            },
+            (err) => {
+                this.setState({errorMessage: err.message}); // Set state is additive, we only add or update state
+            }
         );
     }
 
     // Requirement of React, we have to define a render function.
     render() {
         // Don't initialize any work or request from render, because this gets called frequently
-        return <div>Latitude: {this.state.lat} </div>;
+        if (this.state.errorMessage && !this.state.lat) {
+            return <div>Error: {this.state.errorMessage}</div>;
+        }
+        
+        if (!this.state.errorMessage && this.state.lat) {
+            return <div>Latitude: {this.state.lat}</div>;
+        }
+        
+        return <div>Loading!</div>;
     }
 }
 

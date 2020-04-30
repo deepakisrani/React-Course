@@ -6,3 +6,4 @@ Topics covered are:
 * Class based components
 * State of a component
 * Geolocation API
+* Conditional rendering
