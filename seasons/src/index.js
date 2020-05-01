@@ -1,5 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import SeasonDisplay from './SeasonDisplay';
 
 // Component will almost instantly rerender when the state is updated.
 // State must be initialized when a component is created.
@@ -25,11 +26,9 @@ class App extends React.Component {
         );
     }
 
-    // Called after each update, good for doing some data loading when the state changes. || Like making network calls after a user clicks a button
-    componentDidUpdate() {
-        console.log("Component did update.");
-    }
+    // setState also re-renders any children components too
 
+    // componentDidUpdate: Called after each update, good for doing some data loading when the state changes. || Like making network calls after a user clicks a button
 
     // componentWillUnmount is good for cleaning up of data.
     // More methods, very rarely used: shouldComponentUpdate, getDerivedStateFromProps, getSnapshotBeforeUpdate
@@ -42,10 +41,10 @@ class App extends React.Component {
         }
         
         if (!this.state.errorMessage && this.state.lat) {
-            return <div>Latitude: {this.state.lat}</div>;
+            return <SeasonDisplay lat={this.state.lat} /> //State of parent component can be prop for child.
         }
         
-        return <div>Loading!</div>;
+        return <div>Loading! <i className='asterisk loading icon'></i></div>;
     }
 }
 

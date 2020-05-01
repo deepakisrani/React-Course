@@ -8,3 +8,6 @@ Topics covered are:
 * Geolocation API
 * Conditional rendering
 * Passing state as props
+* Ternary experssions in JSX
+* Configuration Objects
+* Stylize with CSS
