@@ -7,3 +7,4 @@ Topics covered are:
 * State of a component
 * Geolocation API
 * Conditional rendering
+* Passing state as props
