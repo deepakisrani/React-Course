@@ -23,6 +23,14 @@ class App extends React.Component {
         );
     }
 
+    componentDidMount() {
+        console.log("Component did mount.");
+    }
+
+    componentDidUpdate() {
+        console.log("Component did update.");
+    }
+
     // Requirement of React, we have to define a render function.
     render() {
         // Don't initialize any work or request from render, because this gets called frequently
