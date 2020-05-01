@@ -1,6 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import SeasonDisplay from './SeasonDisplay';
+import Spinner from './Spinner';
 
 // Component will almost instantly rerender when the state is updated.
 // State must be initialized when a component is created.
@@ -33,9 +34,8 @@ class App extends React.Component {
     // componentWillUnmount is good for cleaning up of data.
     // More methods, very rarely used: shouldComponentUpdate, getDerivedStateFromProps, getSnapshotBeforeUpdate
 
-    // Requirement of React, we have to define a render function.
-    render() {
-        // Don't initialize any work or request from render, because this gets called frequently
+    // You should avoid conditional rendering, and rather move the conditionals in a helper like this
+    renderContent() {
         if (this.state.errorMessage && !this.state.lat) {
             return <div>Error: {this.state.errorMessage}</div>;
         }
@@ -44,7 +44,17 @@ class App extends React.Component {
             return <SeasonDisplay lat={this.state.lat} /> //State of parent component can be prop for child.
         }
         
-        return <div>Loading! <i className='asterisk loading icon'></i></div>;
+        return <Spinner message="Please accept location request" />;
+    }
+
+    // Requirement of React, we have to define a render function.
+    render() {
+        // Don't initialize any work or request from render, because this gets called frequently
+        return (
+            <div>
+                {this.renderContent()}
+            </div>
+        );
     }
 }
 

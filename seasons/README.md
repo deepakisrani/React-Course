@@ -11,3 +11,4 @@ Topics covered are:
 * Ternary experssions in JSX
 * Configuration Objects
 * Stylize with CSS
+* Specifying default props
