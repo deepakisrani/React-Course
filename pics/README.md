@@ -4,3 +4,5 @@ This app will take as input a search term from the user, then call an external A
 
 React topics covered are:
 * Event Handlers
+* Controlled Vs Uncontrolled Elements
+* Handling form submission
