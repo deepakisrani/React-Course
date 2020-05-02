@@ -6,3 +6,4 @@ React topics covered are:
 * Event Handlers
 * Controlled Vs Uncontrolled Elements
 * Handling form submission
+* Child to parent communication
