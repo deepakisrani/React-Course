@@ -7,3 +7,5 @@ React topics covered are:
 * Controlled Vs Uncontrolled Elements
 * Handling form submission
 * Child to parent communication
+* Map
+* Rendering List Components
