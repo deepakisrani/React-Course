@@ -1,11 +1,15 @@
 import React from 'react';
 
 import SearchBar from './SearchBar';
+import VideoList from './VideoList';
+
 import youtube, { baseSearchParams } from '../apis/youtube';
 
 class App extends React.Component {
 
-    onFormSubmit = async (term) => {
+    state = {videos: []};
+
+    onTermSubmit = async (term) => {
         const response = await youtube.get('/search', {
             params: {
                 ...baseSearchParams,
@@ -13,13 +17,14 @@ class App extends React.Component {
             }
         });
 
-        console.log(response);
+        this.setState({ videos: response.data.items });
     }
 
     render() {
         return (
             <div className="ui container">
-                <SearchBar onFormSubmit={this.onFormSubmit} />
+                <SearchBar onFormSubmit={this.onTermSubmit} />
+                <VideoList videos={this.state.videos} />
             </div>
         );
     }
