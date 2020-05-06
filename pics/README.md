@@ -9,4 +9,4 @@ React topics covered are:
 * Child to parent communication
 * Map
 * Rendering List Components
-* ref system to access React components in DOM
+* Ref system to access React components in DOM
