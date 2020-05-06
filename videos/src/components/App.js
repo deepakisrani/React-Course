@@ -1,11 +1,19 @@
 import React from 'react';
 
 import SearchBar from './SearchBar';
+import youtube, { baseSearchParams } from '../apis/youtube';
 
 class App extends React.Component {
 
-    onFormSubmit = (term) => {
-        console.log(term);
+    onFormSubmit = async (term) => {
+        const response = await youtube.get('/search', {
+            params: {
+                ...baseSearchParams,
+                q: term
+            }
+        });
+
+        console.log(response);
     }
 
     render() {
