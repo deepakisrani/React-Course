@@ -6,12 +6,16 @@ class VideoList extends React.Component {
 
     renderVideoList() {
         return this.props.videos.map((video) => {
-            return <VideoItem key={video.id.videoId} video={video} />;
+            return <VideoItem 
+                        key={video.id.videoId}
+                        onVideoSelect={this.props.onVideoSelect}
+                        video={video} 
+                    />;
         });
     }
 
     render() {
-        return <div>{this.renderVideoList()}</div>;
+        return <div className="ui relaxed divided list">{this.renderVideoList()}</div>;
     }
 }
 
