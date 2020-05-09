@@ -1,0 +1,1 @@
+// This file is named index because of how webpack behaves, if you were to import this file, you just need to mention the name of the folder
