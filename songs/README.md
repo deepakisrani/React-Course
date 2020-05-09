@@ -7,3 +7,4 @@ Topics covered:
 * Context system (Allows parent component to directly communicate with any child element, even if there are other components in between)
 * Passing ActionCreator to Connect component
 * Project Structure
+* Using connect function with a functional component
