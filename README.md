@@ -7,5 +7,6 @@ The apps are created in the following order:
 3. seasons
 4. pics
 5. songs
+6. blog
 
 The details of the purpose of each app can be found in their respective readme file.
