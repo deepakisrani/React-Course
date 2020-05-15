@@ -7,7 +7,7 @@ class App extends React.Component {
             <div className="ui container">
                 <PostList />
             </div>
-        );
+        );  
     }
 }
 

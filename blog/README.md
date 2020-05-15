@@ -5,3 +5,5 @@ Topics covered:
 * Working of Redux-Thunk
 * Initializing middleware with store
 * Making async ActionCreators
+* Rules of reducers
+* Switch cases inside reducers
