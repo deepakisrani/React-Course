@@ -8,5 +8,6 @@ Topics covered:
 * Rules of reducers
 * Switch cases inside reducers
 * Extracting logic to mapStateToProps through use of ownProps
-* Memoization of functions through lodash
-* Calling action creators inside action creators
+* Memoization of functions through lodash (to combat overfetching of data)
+* Calling action creators inside action creators (to combat overfetching of data)
+* Chaining through lodash

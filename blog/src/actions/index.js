@@ -1,10 +1,18 @@
-// import _ from 'lodash'; // Convention to name it as _
+import _ from 'lodash'; // Convention to name it as _
 import jsonPlaceholder from '../apis/jsonPlaceholder';
 
 
-export const fetchPostsandUsers = () => async dispatch => {
+export const fetchPostsandUsers = () => async (dispatch, getState) => {
     await dispatch(fetchPosts()); // When you call an action creator from inside an action creator it is your responsibility to dispatch its result
     // await waits for the dispatched function to finish execution before moving on.
+    // const userIds = _.uniq(_.map(getState().posts, 'userId')); -> Refactoring with chain
+    // userIds.forEach(id => dispatch(fetchUser(id)));
+
+    _.chain(getState().posts)
+        .map('userId')
+        .uniq()
+        .forEach(id => dispatch(fetchUser(id)))
+        .value(); // value is the function that actually executes the chain
 };
 
 
