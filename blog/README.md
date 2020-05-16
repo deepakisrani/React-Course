@@ -7,3 +7,4 @@ Topics covered:
 * Making async ActionCreators
 * Rules of reducers
 * Switch cases inside reducers
+* Extracting logic to mapStateToProps through use of ownProps
