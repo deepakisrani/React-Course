@@ -8,5 +8,6 @@ The apps are created in the following order:
 4. pics
 5. songs
 6. blog
+7. streams
 
 The details of the purpose of each app can be found in their respective readme file.
