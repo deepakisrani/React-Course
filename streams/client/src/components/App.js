@@ -1,12 +1,12 @@
 import React from 'react';
-import { BrowserRouter, Route } from 'react-router-dom';
+import { BrowserRouter, Route, Link } from 'react-router-dom';
 
 const PageOne = () => {
-    return <div>PageOne</div>;
+    return <div>PageOne<br/><Link to="/pagetwo" >Navigate to: Page Two</Link></div>;
 }
 
 const PageTwo = () => {
-    return <div>PageTwo</div>;
+    return <div>PageTwo<br/><Link to="/" >Navigate to: Home</Link></div>;
 }
 
 class App extends React.Component {
