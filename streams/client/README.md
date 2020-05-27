@@ -5,3 +5,5 @@ This project is to understand the workings of react-router. Topics covered:
 * Differece between BrowserRouter/HashRouter/MemoryRouter
 * OAuth-Based authentication through Google
 * Make use of redux-form for handlng form inputs
+* Handling form submit with redux-form
+* Validating inputs in redux-form
