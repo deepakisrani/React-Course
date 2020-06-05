@@ -9,6 +9,17 @@
       "title": "New Stream",
       "description": "Newer Description",
       "id": 2
+    },
+    {
+      "title": "Test Stream",
+      "description": "This is another stream without user id in it.",
+      "id": 3
+    },
+    {
+      "title": "Actually This Has User",
+      "description": "Forgot there's no google sign in for firefox so this has the user id.",
+      "userId": "103701640031505048137",
+      "id": 4
     }
   ]
 }
