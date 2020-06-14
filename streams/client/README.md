@@ -8,3 +8,4 @@ This project is to understand the workings of react-router. Topics covered:
 * Handling form submit with redux-form
 * Validating inputs in redux-form
 * Creating a history object
+* React Portal
