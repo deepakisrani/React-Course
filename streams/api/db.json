@@ -20,6 +20,18 @@
       "description": "Forgot there's no google sign in for firefox so this has the user id.",
       "userId": "103701640031505048137",
       "id": 4
+    },
+    {
+      "title": "New Stream",
+      "description": "More description",
+      "userId": "103701640031505048137",
+      "id": 5
+    },
+    {
+      "title": "Refactored",
+      "description": "Testing refactored create stream.",
+      "userId": "103701640031505048137",
+      "id": 6
     }
   ]
 }

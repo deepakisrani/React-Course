@@ -1,7 +1,8 @@
 import React from 'react';
-import { BrowserRouter, Route } from 'react-router-dom';
+import { Router, Route } from 'react-router-dom';
 
 import Header from './Header';
+import history from '../history';
 
 import StreamCreate from './streams/StreamCreate';
 import StreamDelete from './streams/StreamDelete';
@@ -12,19 +13,20 @@ import StreamShow from './streams/StreamShow';
 class App extends React.Component {
 
     // If you have a component outside BrowserRouter, it will be shown 100% of the time (provided it doesn't use any Router related components)
+    // BrowserRouter ignores the history prop. Plain Router can use custom history
     render() {
         return (
             <div className="ui container">
-                <BrowserRouter>
+                <Router history={history}>
                     <div>
                         <Header />
                         <Route path="/" exact component={StreamList} />
                         <Route path="/streams/new" exact component={StreamCreate} />
-                        <Route path="/streams/edit" exact component={StreamEdit} />
+                        <Route path="/streams/edit/:id" exact component={StreamEdit} />
                         <Route path="/streams/delete" exact component={StreamDelete} />
                         <Route path="/streams/show" exact component={StreamShow} />
                     </div>
-                </BrowserRouter>
+                </Router>
             </div>
         );
     }
