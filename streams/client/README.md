@@ -10,3 +10,4 @@ This project is to understand the workings of react-router. Topics covered:
 * Creating a history object
 * React Portal
 * React Fragments
+* Switch in react-router-dom
