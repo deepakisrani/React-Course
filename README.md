@@ -6,8 +6,10 @@ The apps are created in the following order:
 2. components
 3. seasons
 4. pics
-5. songs
-6. blog
-7. streams
+5. videos
+6. songs
+7. blog
+8. streams
+9. translate
 
 The details of the purpose of each app can be found in their respective readme file.
