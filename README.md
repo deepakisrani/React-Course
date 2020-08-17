@@ -11,5 +11,6 @@ The apps are created in the following order:
 7. blog
 8. streams
 9. translate
+10. widgets
 
 The details of the purpose of each app can be found in their respective readme file.
