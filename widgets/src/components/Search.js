@@ -3,7 +3,22 @@ import axios from 'axios';
 
 const Search = () => {
     const [searchTerm, setSearchTerm] = useState('');
+    const [debouncedTerm, setDebouncedTerm] = useState(searchTerm);
     const [results, setResults] = useState([]);
+
+
+    useEffect(() => {
+
+        const timerId = setTimeout(() => {
+            setDebouncedTerm(searchTerm)
+        }, 500);
+
+        // Cleanup function for useEffect, performed before rerender which fulfills the condition
+        return () => {
+            clearTimeout(timerId);
+        }
+
+    }, [searchTerm]);
 
     
     useEffect(() => {
@@ -14,47 +29,17 @@ const Search = () => {
                     list: 'search',
                     origin: '*',
                     format: 'json',
-                    srsearch: searchTerm
+                    srsearch: debouncedTerm
                 }
             });
 
             setResults(data.query.search);
         };
 
-        
-        /*
-
-        This structure makes sense when you have an initial term present.
-
-        if (searchTerm && !results.length) {
+        if (debouncedTerm) {
             search();
         }
-        else {
-            const timeoutId = setTimeout(() => {
-                if (searchTerm) {
-                    search();
-                }
-            }, 500);
-
-            // Cleanup function for useEffect, performed before rerender which fulfills the condition
-            return () => {
-                clearTimeout(timeoutId);
-            }
-        }
-        */
-
-       const timeoutId = setTimeout(() => {
-        if (searchTerm) {
-                search();
-            }
-        }, 500);
-
-        // Cleanup function for useEffect, performed before rerender which fulfills the condition
-        return () => {
-            clearTimeout(timeoutId);
-        }
-
-    }, [searchTerm]);
+    }, [debouncedTerm]);
 
     const renderedResults = results.map((result) => {
         return (
