@@ -6,3 +6,6 @@ Topics covered:
 * useState hook
 * useEffect hook
 * dangerouslySetInnerHTML
+* useEffect's Cleanup function
+* Firing order of event listeners (Manual listeners fired before React ones)
+* useRef hook
