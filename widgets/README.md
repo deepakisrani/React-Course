@@ -9,3 +9,4 @@ Topics covered:
 * useEffect's Cleanup function
 * Firing order of event listeners (Manual listeners fired before React ones)
 * useRef hook
+* Routing from scratch
