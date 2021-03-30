@@ -9,3 +9,4 @@ This app contains topics related to writing tests for a react application. Topic
 * Retrieving prop values in Enzyme
 * describe statement
 * Add redux to test components
+* CheerioWrapper / Cheerio Queries
