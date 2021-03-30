@@ -10,3 +10,6 @@ This app contains topics related to writing tests for a react application. Topic
 * describe statement
 * Add redux to test components
 * CheerioWrapper / Cheerio Queries
+* Integration tests
+* Faking network requests with Moxios
+* Marking end of tests with done in JEST
