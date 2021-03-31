@@ -1,6 +1,6 @@
 # testing
 
-This app contains topics related to writing tests for a react application. Topics covered:
+## This app contains topics related to writing tests for a react application. Topics covered:
 * expect()
 * Enzyme and Enzyme Adapter
 * beforeEach
@@ -13,3 +13,8 @@ This app contains topics related to writing tests for a react application. Topic
 * Integration tests
 * Faking network requests with Moxios
 * Marking end of tests with done in JEST
+
+## Refactoring original app to cover the next set of topics: [TESTS FAILING AFTER REFACTOR]
+* Higher Order Components
+* Scaffolding for HOC
+* Passing Props
